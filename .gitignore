@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Env / secrets
+.env
+*.pubxml
+*.publishsettings
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/

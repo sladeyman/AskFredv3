@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Halfords • AI Agent Chat</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><div class="logo" aria-hidden="true"></div><span>Halfords • AI Agent</span></div>
+      <div class="actions">
+        <span id="status" class="pill muted">Connecting…</span>
+        <button id="newChat" class="btn" title="Start a fresh thread">New chat</button>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle dark mode">🌙</button>
+        <button id="a11yToggle" class="icon-btn" aria-label="Toggle accessible mode" title="Toggle accessible mode">Accessible mode</button>
+        <!-- Skip link for keyboard users -->
+<a href="#messages" class="skip-link">Skip to chat content</a>
+
+<!-- Add next to theme toggle -->
+
+
+
+      </div>
+    </header>
+
+    <main class="chat">
+      <div id="messages" class="messages" aria-live="polite" aria-busy="false">
+        <!-- Initial welcome + quick actions -->
+        <div class="msg assistant">
+          <div class="avatar h" title="Halfords">H</div>
+          <div>
+            <div class="meta">Assistant · ready</div>
+            <div class="bubble">
+              Hi! I’m your Halfords AI Agent. Ask me anything to get started.
+              <div class="quick-wrap">
+                <div class="muted" style="margin-bottom:6px;">Quick actions</div>
+                <div class="quick" id="quickActionsStatic">
+                  <span class="chip" role="button" tabindex="0" data-action="wimo">Track my order</span>
+                  <span class="chip" role="button" tabindex="0" data-prompt="Find my nearest Halfords store.">Find a store</span>
+                  <span class="chip" role="button" tabindex="0" data-prompt="Help me choose a bike.">Help me choose</span>
+                  <span class="chip" role="button" tabindex="0" data-action="c2w">Cycle2Work status</span>
+                  <span class="chip" role="button" tabindex="0" data-prompt="I want to book a bike service.">Book a bike service</span>
+                   <span class="chip" role="button" tabindex="0" data-prompt="What Motoring Club Benefits do I have left?">What Motorinfg Club Benefits do I have left?</span>
+                  <span class="chip" role="button" tabindex="0" data-action="loyalty">Join our Motoring Club</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sentinel will be injected by chat.js -->
+      </div>
+
+      
+    </main>
+
+    <div class="composer-wrap">
+      <form id="composer" class="composer">
+        <textarea id="userText" placeholder="Type your message… (Shift+Enter for a new line)"></textarea>
+        <button id="send" class="send" type="submit">Send</button>
+      </form>
+      <div class="muted" style="max-width:980px;margin:8px auto 0 auto;">
+        Uses your Halfords Azure AI Foundry Agent. Messages are processed server-side via a secure service principal.
+      </div>
+    </div>
+  </div>
+
+  <!-- Your extracted chat logic -->
+  <script type="module" src="./chat.js"></script>
+</body>
+</html>

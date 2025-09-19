@@ -1,0 +1,66 @@
+<form id="tool-form" class="mini-form" aria-label="Join loyalty">
+  <strong>Join Halfords Motoring Club and start saving</strong>
+
+  <div class="mini-row">
+    <label for="title">Title</label>
+    <select name="title" id="title" required>
+      <option value="">Select…</option>
+      <option>Mr</option>
+      <option>Mrs</option>
+      <option>Miss</option>
+      <option>Ms</option>
+      <option>Dr</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div class="mini-row">
+    <label>First name</label>
+    <input name="firstName" placeholder="First name" required />
+  </div>
+
+  <div class="mini-row">
+    <label>Last name</label>
+    <input name="lastName" placeholder="Last name" required />
+  </div>
+
+ 
+<div class="mini-row">
+    <label>Postcode</label>
+    <input name="address.addressPostcode" placeholder="B27 7UW" required />
+  </div>
+
+  <div class="mini-row">
+    <label>Email address</label>
+    <input name="emailAddress" type="email" placeholder="you@example.com" required />
+  </div>
+
+  <div class="mini-row">
+    <label>Phone number</label>
+    <input name="phoneNumber" type="tel" placeholder="00447747797336" />
+  </div>
+
+  <div class="mini-row">
+    <label>Vehicle reg (VRN)</label>
+    <input name="vrn" placeholder="ABC 123" />
+  </div>
+
+  <div class="mini-row">
+    <label>Mileage</label>
+    <input name="mileage" type="number" inputmode="numeric" placeholder="55214" />
+  </div>
+
+  <fieldset class="mini-row" style="border:none;padding:0;margin:0">
+    <legend class="mini-hint" style="margin-bottom:6px">Marketing consent</legend>
+    <label><input type="checkbox" name="groupMarketing.emailConsent"> Email</label>
+    <label><input type="checkbox" name="groupMarketing.smsConsent"> SMS</label>
+    <label><input type="checkbox" name="groupMarketing.phoneConsent"> Phone</label>
+    <label><input type="checkbox" name="groupMarketing.directConsent"> Post</label>
+  </fieldset>
+
+  <div class="mini-actions">
+    <button class="mini-send" type="submit">Sign Me Up</button>
+    <button class="mini-cancel" type="button" data-cancel>Not Today thanks</button>
+  </div>
+  <div class="mini-hint">Your details will be sent securely to get you signed up.</div>
+</form>
